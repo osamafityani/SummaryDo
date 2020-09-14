@@ -3,6 +3,7 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from flask import Flask, request, jsonify, after_this_request
 from heapq import nlargest
+import json
 
 stopWords = list(STOP_WORDS)
 nlp = spacy.load('en_core_web_sm')
@@ -55,13 +56,16 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def upload_data():
+    print('1')
     @after_this_request
     def add_header(response):
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
-
-    data = request.get_json()
+    print('2')
+    data = request.get_json(force=True)
+    print('3')
     print(data['dscr'])
+
     return jsonify(textSummarize(data['dscr']))
 
 
