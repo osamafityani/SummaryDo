@@ -2,6 +2,7 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from flask import Flask, request, jsonify, after_this_request
+from heapq import nlargest
 
 stopWords = list(STOP_WORDS)
 nlp = spacy.load('en_core_web_sm')
@@ -21,6 +22,32 @@ def textSummarize(text):
                 wordFrequencies[wordLower] = 1
             else:
                 wordFrequencies[wordLower] += 1
+
+    maxFrequency = max(wordFrequencies.values())
+    for key in wordFrequencies.keys():
+        wordFrequencies[key] = wordFrequencies[key] / maxFrequency
+
+    sentenceTokens = [sent for sent in doc.sents]
+
+    sentenceScores = {}
+
+    for sent in sentenceTokens:
+        for word in sent:
+            wordLower = word.text.lower()
+            if wordLower in wordFrequencies.keys():
+                if wordLower not in sentenceScores:
+                    sentenceScores[sent] = wordFrequencies[wordLower]
+                else:
+                    sentenceScores[sent] += wordFrequencies[wordLower]
+    selectRange = int(len(sentenceTokens) * 0.3)
+    summarySentences = nlargest(selectRange, sentenceScores, sentenceScores.get)
+
+
+
+
+
+
+
     return wordFrequencies
 
 app = Flask(__name__)
@@ -40,9 +67,3 @@ def upload_data():
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8989)
-
-
-
-
-
-
