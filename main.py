@@ -3,7 +3,6 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from flask import Flask, request, jsonify, after_this_request
 from heapq import nlargest
-import json
 
 stopWords = list(STOP_WORDS)
 nlp = spacy.load('en_core_web_sm')
@@ -43,29 +42,28 @@ def textSummarize(text):
     selectRange = int(len(sentenceTokens) * 0.3)
     summarySentences = nlargest(selectRange, sentenceScores, sentenceScores.get)
 
+    summary = []
+    for sent2 in sentenceTokens:
+        for sent1 in summarySentences:
+            if sent1 == sent2:
+                summary.append(sent1)
 
+    summary = [word.text for word in summary]
 
+    summary = ' '.join(summary)
 
-
-
-
-    return wordFrequencies
+    return summary
 
 app = Flask(__name__)
 
 
 @app.route('/', methods=['POST'])
 def upload_data():
-    print('1')
     @after_this_request
     def add_header(response):
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
-    print('2')
     data = request.get_json(force=True)
-    print('3')
-    print(data['dscr'])
-
     return jsonify(textSummarize(data['dscr']))
 
 
