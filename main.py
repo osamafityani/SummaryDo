@@ -40,7 +40,7 @@ def textSummarize(text):
                     sentenceScores[sent] = wordFrequencies[wordLower]
                 else:
                     sentenceScores[sent] += wordFrequencies[wordLower]
-    selectRange = int(len(sentenceTokens) * 0.3)
+    selectRange = int(len(sentenceTokens) * 0.5)
     summarySentences = nlargest(selectRange, sentenceScores, sentenceScores.get)
 
     summary = []
@@ -52,6 +52,10 @@ def textSummarize(text):
     summary = [word.text for word in summary]
 
     summary = ' '.join(summary)
+
+    print(summary)
+    print(len(summary))
+    print(len(text))
 
 
     # volume = 100
@@ -74,6 +78,7 @@ def upload_data():
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
     data = request.get_json(force=True)
+    print(data['dscr'])
     return jsonify(textSummarize(data['dscr']))
 
 
