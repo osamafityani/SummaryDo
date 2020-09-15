@@ -1,3 +1,10 @@
+function setup(){
+  noCanvas();
+  let bgpage = chrome.extension.getBackgroundPage();
+  let word = bgpage.word ;
+  creatP(word);
+}
+
 async function postData(url = '', data = {}) {
   // Default options are marked with *
   const response = await fetch(url, {
