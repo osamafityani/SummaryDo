@@ -3,6 +3,7 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from flask import Flask, request, jsonify, after_this_request
 from heapq import nlargest
+from win32com.client import Dispatch
 
 stopWords = list(STOP_WORDS)
 nlp = spacy.load('en_core_web_sm')
@@ -52,6 +53,15 @@ def textSummarize(text):
 
     summary = ' '.join(summary)
 
+
+    # volume = 100
+    # rate = -1
+    # speaker = Dispatch("SAPI.SpVoice")
+    # speaker.Voice = speaker.GetVoices().Item(1)
+    # speaker.Rate = rate
+    # speaker.Volume = volume
+    # speaker.speak(summary)
+
     return summary
 
 app = Flask(__name__)
@@ -69,3 +79,4 @@ def upload_data():
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8989)
+
