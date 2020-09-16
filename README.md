@@ -181,4 +181,4 @@ a new algorithm that can summarize in smart way. Which can recognize the subject
 ## Demo Video
 
 Watch the demo video here.
-https://drive.google.com/file/d/1DPDNV0x_qsAKNBlwz24GVHVq7EJYC5M/view?usp=sharing
+https://drive.google.com/file/d/1DPDNV0x_qysAKNBlwz24GVHVq7EJYC5M/view?usp=sharing
