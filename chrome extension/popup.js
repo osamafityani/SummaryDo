@@ -20,7 +20,7 @@ async function postData(url = '', data = {}) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-document.getElementById("mybutton").addEventListener("click", postData('http://localhost:8989/',{dscr: window.word} )
+document.getElementById("mybutton").addEventListener("click", postData('http://osamafityani.pythonanywhere.com/',{dscr: window.word} )
 .then(data=>{
   console.log(data);
   document.getElementById("info").value = data;
