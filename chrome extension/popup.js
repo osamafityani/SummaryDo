@@ -1,8 +1,9 @@
+console.log('popup running');
+setup();
 function setup(){
-  noCanvas();
   let bgpage = chrome.extension.getBackgroundPage();
-  let word = bgpage.word ;
-  creatP(word);
+   window.word = bgpage.word ;
+  console.log(word);
 }
 
 async function postData(url = '', data = {}) {
@@ -19,7 +20,7 @@ async function postData(url = '', data = {}) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-document.getElementById("mybutton").addEventListener("click", postData('http://localhost:8989/',{dscr: "I am a sample Text"} )
+document.getElementById("mybutton").addEventListener("click", postData('http://localhost:8989/',{dscr: window.word} )
 .then(data=>{
   console.log(data);
 }));
