@@ -176,3 +176,7 @@ a new algorithm that can summarize in smart way. Which can recognize the subject
 - click the icon of the extension to see and listen to the summary
 - You don't have to run the main.py file because we already deployed the flask api to pythonanyware.com
 
+## Demo Video
+
+Watch the demo video here.
+https://drive.google.com/file/d/1DPDNV0x_qsAKNBlwz24GVHVq7EJYC5M/view?usp=sharing
