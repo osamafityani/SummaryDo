@@ -126,7 +126,7 @@ The main goal
 
  ![summ](https://user-images.githubusercontent.com/71225087/93319473-91f6de00-f818-11ea-87f5-25347656a967.jpg)
 
-color | black & orange | 
+color | black & orange | #
 ---|---|---
 wording  | killer brief |reader comfort 
 logo | matchless | represent the idea 
