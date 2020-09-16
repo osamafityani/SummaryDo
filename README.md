@@ -166,6 +166,7 @@ a new algorithm that can summarize in smart way. Which can recognize the subject
   
  it can also be a scientific article...
 
+We are also thinking of making the speech pace controllable by the user.
 
 
 ![SummaryDo](https://user-images.githubusercontent.com/71225087/93099323-8ee0de00-f6b0-11ea-9a38-010bbf37aca2.jpg)
