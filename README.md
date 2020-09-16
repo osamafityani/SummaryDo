@@ -36,10 +36,10 @@ in order to help various people during browsing in different ways .
 The model will summsrize a web page text after shading it  . post the summarization a voice will read the new text to the browsers enabling 
 customers  save : time , efort and help elders or people with disabilties to have the greatest experince .
 
-*  until now it can speak just in  english 
+*  until now it can just speak english 
 
 
-*  the model can deal with alot of pages :
+*  the model can deal with any webpage:
 
 | like : |
 | ------------- |
@@ -47,21 +47,14 @@ customers  save : time , efort and help elders or people with disabilties to hav
 | any item description on amazon    | 
  
 
-ALL just in two clicks    
+ALL just in one click...  
 
 
 
 ## Algorithms 
 
-a new algorithm that can summarize in smart way. Which can recognize the product category to result a better summarization to be as much practical as possibble  
-
-* such as :
- if we have a router the model will foucs on specific themes related to the product , in this case (speed , Lan ports ,  technology generation , range)
-
- likewise on other product (sports, clothing , gaming , furniture , etc ...)  
-
-
-### TextRank Algorithm
+ 
+### TextRanking Algorithm
  * (NLP)
 which link all the text in the articles then split the hole text into individual senteces . 
 Every sentence will find a vector representation . Similarities between sentence vectors are then calculated and stored in a matrix . 
@@ -113,11 +106,11 @@ an open source library for (NLP) in python that can be used in deep learning and
 
 
 ## chrome extension 
-THe chrome extention was wrriten by javascript and HTML 
+The chrome extention was wrriten by javascript and HTML 
 
 the design is simple to satisfy the user experience placing a superb impact 
  
-after opening the extension the user will shade the specific text then the new summarized text ready-made to the reader 
+after opening the extension the user will shade the specific text then the new summarized text will be ready to the reader 
 
 
 
@@ -133,7 +126,7 @@ The main goal
 
  ![summ](https://user-images.githubusercontent.com/71225087/93319473-91f6de00-f818-11ea-87f5-25347656a967.jpg)
 
-color | black & orange | inspired by amazon logo
+color | black & orange | 
 ---|---|---
 wording  | killer brief |reader comfort 
 logo | matchless | represent the idea 
@@ -158,14 +151,28 @@ so it's readable and hearable
 ## future look 
 
 Looking ahead, new trends continue to emerge and merge .
-the project development  ( AI & deep learning )  will lead to expantion through every e-commerce web site 
-allowing customers enjoying browsing  
+the project development  ( AI & deep learning )  will lead to expantion through every website, e-commerce websites 
+allowing customers to enojoy browsing  
 
 
+a new algorithm that can summarize in smart way. Which can recognize the subject or the category of the text to result in a better summarization to be as much practical as possibble. It would be able to summarize a text giving more weight to the sentences related to its subject.
 
+* such as :
+ if we have a router the model will foucs on specific themes related to the product , in this case (speed , Lan ports ,  technology generation , range)
+
+ likewise on other products (sports, clothing , gaming , furniture , etc ...)  
+  
+ it can also be a scientific article...
 
 
 
 ![SummaryDo](https://user-images.githubusercontent.com/71225087/93099323-8ee0de00-f6b0-11ea-9a38-010bbf37aca2.jpg)
 
+## How to run the extension
+
+- Download the files from the repository
+- upload the "chrome extension" folder as unpacked chrome extension to chrome
+- Highlight the text that you want to summarize in any webpage
+- click the icon of the extension to see and listen to the summary
+- You don't have to run the main.py file because we already deployed the flask api to pythonanyware.com
 
