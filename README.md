@@ -121,7 +121,7 @@ after opening the extension the user will shade the specific text then the new s
 
 
 
-...........................................
+
 ## design
 The main goal 
 * catching attention with preservation to eye relaxation
