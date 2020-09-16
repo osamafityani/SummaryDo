@@ -16,6 +16,8 @@
 * design 
 * API 
 * future look
+* How to run the extension
+* Demo Video
 
  
 
