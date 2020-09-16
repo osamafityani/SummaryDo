@@ -23,4 +23,5 @@ async function postData(url = '', data = {}) {
 document.getElementById("mybutton").addEventListener("click", postData('http://localhost:8989/',{dscr: window.word} )
 .then(data=>{
   console.log(data);
+  document.getElementById("info").value = data;
 }));
