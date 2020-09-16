@@ -24,4 +24,7 @@ document.getElementById("mybutton").addEventListener("click", postData('http://l
 .then(data=>{
   console.log(data);
   document.getElementById("info").value = data;
+  var msg = new SpeechSynthesisUtterance();
+    msg.text = data;
+    window.speechSynthesis.speak(msg);
 }));
