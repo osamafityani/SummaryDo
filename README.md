@@ -8,35 +8,35 @@
 
 
 ## contents
-* The vision
+* Vision
 * Summary
 * Algorithms 
 * Code 
-* chrome extension
-* design 
-* API 
-* future look
+* Chrome extension
+* Sesign 
+* REST API 
+* Future look
 * How to run the extension
 * Demo Video
 
  
 
-## The vision 
+## Vision 
 
 
-A program that can summarize any product page into small , simple and informatic design with few sentences which can be read or listened to 
-in order to help various people during browsing in different ways . 
+A program that can summarize any webpage page into a small , simple and informatic design with few sentences which can be read or listened to 
+in order to help various people during browsing in different ways. 
 
 
-## summary 
+## Summary 
 
 
 ![summary logo](https://user-images.githubusercontent.com/71225087/93217463-c6fc2580-f771-11ea-9a33-df3a6548c8e6.png)
 
 
 
-The model will summsrize a web page text after shading it  . post the summarization a voice will read the new text to the browsers enabling 
-customers  save : time , efort and help elders or people with disabilties to have the greatest experince .
+The model will summsrize a web page text after highlighting it. After the summarization a voice agent will read the new text, 
+saving customers time and effort. And it help elders or people with disabilties to have the greatest experince .
 
 *  until now it can just speak english 
 
@@ -65,7 +65,7 @@ The similarity matrix is then converted into a graph, with sentences as vertices
 all leads to the final suumary (a certain number of top ranked sentences)
 
 
-## code
+## Code
 
 written by python 
 
@@ -107,7 +107,7 @@ an open source library for (NLP) in python that can be used in deep learning and
 
 
 
-## chrome extension 
+## Chrome extension 
 The chrome extention was wrriten by javascript and HTML 
 
 the design is simple to satisfy the user experience placing a superb impact 
@@ -117,7 +117,7 @@ after opening the extension the user will shade the specific text then the new s
 
 
 
-## design
+## Design
 The main goal 
 * catching attention with preservation to eye relaxation
 * simplicity 
@@ -137,20 +137,20 @@ logo | matchless | represent the idea
 ## API 
 
 it is a computing interface which defines interactions between multiple software in our case a web page and the python program
- using (flask )& (json) we had the potential connecting them together . 
+ using (flask) & (json) we had the potential connecting them together . 
 
 * flask api to connect with frontend   
 
 
-now the model is able to grab a text from any web page and summarize it to the reader with  voice emulator
+now the model is able to grab a text from any web page and summarize it to the reader with voice emulator
 
 
-so it's readable and hearable    
+So it's readable and hearable    
+
+The model was finally deployed to PythonAnyWhere
 
 
-
-
-## future look 
+## Future look 
 
 Looking ahead, new trends continue to emerge and merge .
 the project development  ( AI & deep learning )  will lead to expantion through every website, e-commerce websites 
